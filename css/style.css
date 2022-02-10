@@ -10,7 +10,6 @@ body, html{
   overflow-x: hidden;
 }
 
-
 h3,p,h1,h2 {
   font-family: 'ubuntu';
 }
@@ -38,6 +37,12 @@ p{
   height: 95vh;
 }
 
+.hero-column{
+  padding-top: 20vh;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .hero-text{
   padding-top: 0%;
   text-align: center;
@@ -48,6 +53,7 @@ p{
   width: 30%;
   margin-left: auto;
   margin-right: auto;
+  max-width: 500px;
 }
 .font1{
   font-family: 'ubuntu'!important;
@@ -57,7 +63,6 @@ p{
 .hero-heading {
   width:100%;
   text-align: center;
-  padding-top: 10%;
 }
 
 .font2{
@@ -180,7 +185,12 @@ position: relative;
 
 .fade-in{
   opacity: 1!important;
-  transition: all .5s ease-in-out;
+  transition: all .5s ease-in;
+}
+
+.fade-out{
+  opacity: 0!important;
+  transition: all 4s ease-in-out;
 }
 
 
@@ -290,18 +300,45 @@ position: relative;
   transform: translate(0%, -20%);
 }
 
+.projects .scrollicon{
+  height: 50px;
+  width: 30px;
+  border: 2px solid black;
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  opacity: 50%;
+  animation: blinker 5s linear infinite;
+  animation-delay: 3s;
+  opacity: .1;
+}
 
-@media only screen and (min-width: 420px){
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+@media only screen and (min-width: 1024px){
+  .container{
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+
+
 
 }
 
 
 
 
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width:480px){
 
   .hero-column{
-    padding-top: 20%;
+    padding-top: 20vh;
     padding-left: 5%;
     padding-right: 5%;
   }
