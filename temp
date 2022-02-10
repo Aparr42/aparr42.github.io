@@ -1,0 +1,11 @@
+var scenepin = new ScrollMagic.Scene({
+  triggerElement:'.project1',
+  triggerHook: "onLeave"
+})
+.addTo(controller)
+.setPin('.project1');
+
+scenepin.addIndicators({
+  name:'pin'
+
+});

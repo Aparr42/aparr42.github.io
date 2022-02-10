@@ -1,0 +1,154 @@
+/* Hero Section */
+
+*{
+  margin: 0px;
+  padding:0px;
+}
+
+.hero{
+  height: 100vh;
+}
+
+.hero-text{
+  margin-left:20%;
+  margin-right:10%;
+  padding-top: 30%;
+  text-align: center;
+}
+
+.font1{
+  font-family: 'JetBrains Mono';
+}
+
+.font2{
+  font-family: Gugi;
+}
+
+/* Background + Introduction*/
+
+.solid-bg {
+  background:blue;
+  color: white;
+  text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 20vh;
+}
+
+.solid-bg .container{
+  max-width: 50%;
+  line-height: 2rem;
+  font-size: 1.125rem;
+  font-weight: 200;
+}
+
+/* About Columns Section */
+
+.about{
+  margin-top: -15vh;
+}
+
+i{
+  line-height: 30px;
+  color:blue;
+}
+
+.about h2{
+  font-size: 1.5rem;!important;
+  font-family: 'JetBrains Mono';
+  font-weight: 1000;
+}
+
+.about .emphasis{
+  color: blue;
+  font-weight: 300;
+}
+
+.about p{
+  line-height: 2rem;
+  font-size: 1.125rem;
+  font-weight: 200;
+}
+
+.about div{
+  text-align: center;
+}
+
+.border-right{
+  border-right: 1px solid #E6ECF8;
+}
+
+.about .row{
+  border: 1px solid #E6ECF8;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.about .column{
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+
+/* work section */
+
+.work{
+  height: 100vh;
+  position: relative;
+}
+.work .workinfo{
+  padding-top: 20%;
+  padding-left: 5%;
+  height:100vh;
+}
+
+.work .imges{
+  postion: relative;
+  width:100%;
+}
+
+.work .image1{
+  padding-top: 20px;
+  padding-right: 20px;
+  width:50%;
+}
+
+.work .image2{
+  position: absolute;
+  right:0;
+  top:0;
+  width: 20%;
+  z-index: -1;
+}
+
+.work .image3{
+  width:40%;
+}
+.work h3{
+  font-size: 80px;
+}
+
+.work .workinfo p{
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+.work .toptext{
+  padding-left: 3%;
+  position: absolute;
+  top: 50px;
+}
+
+.full-width-div {
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+.work .bottomtext{
+  padding-left: 3%;
+  padding-bottom: 2%;
+  bottom:50px;
+  position: absolute;
+
+}

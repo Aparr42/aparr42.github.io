@@ -1,0 +1,397 @@
+/* Hero Section */
+
+*{
+  margin: 0px;
+  padding:0px;
+
+}
+
+body{
+  overflow-x: hidden;
+}
+
+h3,p,h1,h2 {
+  font-family: 'ubuntu';
+}
+
+h1{
+  font-weight: bold!important;
+  font-size: 2rem!important;
+}
+
+h2{
+  font
+}
+
+p{
+  font-weight:light!important;
+  opacity: 80%;
+}
+
+.subtitle{
+  font-weight: 300;
+}
+
+
+.hero{
+  height: 95vh;
+}
+
+.hero-text{
+  padding-top: 0%;
+  text-align: center;
+}
+
+.hero-animation{
+  justify-content: center;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.font1{
+  font-family: 'ubuntu'!important;
+  font-weight: 500;
+}
+
+.hero-heading {
+  width:100%;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.font2{
+  font-family: Gugi;
+}
+
+/* Background + Introduction*/
+
+.solid-bg {
+  background:#7510F7;
+  color: white;
+  text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 30vh;
+}
+
+.solid-bg{
+  line-height: 2rem;
+  font-size: 1.125rem;
+}
+
+/* About Columns Section */
+
+.about{
+  margin-top: -20vh;
+}
+
+i{
+  line-height: 30px;
+  color:#7510F7;
+}
+
+
+.about h2{
+  font-size: 1.5rem;!important;
+  font-weight: 800!important;
+}
+
+.about .emphasis{
+  color: #7510F7;
+  font-weight: 300;
+}
+
+.about p{
+  line-height: 2rem;
+  font-size: 1.125rem;
+  font-weight: 200;
+}
+
+.about div{
+  text-align: center;
+}
+
+.border-right{
+  border-right: 1px solid #E6ECF8;
+}
+
+.about .row{
+  border: 1px solid #E6ECF8;
+  border-radius: 16px;
+  background-color: white;
+  filter: drop-shadow(0.01rem 0.01rem 1rem rgba(0,0,0,0.05));
+}
+
+.about .column{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 20%;
+  padding-bottom: 10%;
+}
+
+/* Projects */
+
+.projects{
+height: 150vh;
+width: 100vw;
+position: relative;
+}
+
+ .project1 .project2 .project3{
+  width:100%;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+}
+
+.project-description{
+  width: 50%;
+  padding-top: 2%;
+  padding-left: 1%;
+  height: 100vh;
+  float: left;
+  transition: all .5s ease-in-out;
+}
+
+
+
+.project-description h3{
+  font-size: 4.5rem;
+  display: flex;
+}
+
+.project-description p{
+  font-size: 1.5rem;
+  font-weight: 400;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  opacity: 90%;
+}
+
+.project-description .toptext {
+  padding-left: 1%;
+  top: 5%;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  font-weight: 500;
+}
+
+.fade-in{
+  opacity: 1!important;
+  transition: all .5s ease-in-out;
+}
+
+
+.project-description .bottomtext {
+  padding-bottom: 2%;
+  padding-left: 1%;
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  font-weight: 400;
+  opacity: 60%;
+}
+
+ .ptwo {
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.pone {
+ opacity: 0;
+ transition: all .5s ease-in-out;
+}
+
+.pthree {
+ opacity: 0;
+ transition: all .5s ease-in-out;
+}
+
+
+
+.project-images img{
+
+  position: absolute;
+  filter: drop-shadow(10px 10px 10px #444);
+  border-radius: 16px;
+  max-width: 300px;
+
+}
+
+.project-images {
+  width: 50%;
+  float: right;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.projects .image2 {
+  position: absolute;
+  width: 20%;
+  transform: translate(-55%, 10%);
+}
+
+.projects .image1 {
+  position: absolute;
+  z-index: 1;
+  transform: translate(0%, -20%);
+  width: 20%;
+}
+
+.projects .image3 {
+  position: absolute;
+  transform: translate(55%, 10%);
+  width: 20%;
+
+}
+
+.projects .image4 {
+  position: absolute;
+  width: 20%;
+  transform: translate(-55%, 10%);
+}
+
+.projects .image5 {
+  position: absolute;
+  z-index: 1;
+  transform: translate(55%, 10%);
+
+  width: 20%;
+}
+
+.projects .image6 {
+  position: absolute;
+  width: 20%;
+  transform: translate(0%, -20%);
+}
+
+
+.projects .image7 {
+  position: absolute;
+  width: 20%;
+  transform: translate(-55%, 10%);
+}
+
+.projects .image8 {
+  position: absolute;
+  z-index: 1;
+  transform: translate(55%, 10%);
+
+  width: 20%;
+}
+
+.projects .image9 {
+  position: absolute;
+  width: 20%;
+  transform: translate(0%, -20%);
+}
+
+
+@media only screen and (min-width: 420px){
+
+}
+
+
+
+
+@media only screen and (min-width: 320px) {
+
+  .hero-column{
+    padding-top: 20%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .about{
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+
+
+  .subtitle{
+    font-size: 1.25rem!important;
+  }
+
+  .hero-animation{
+    width: 80%;
+  }
+
+  .container{
+    padding-right: 10%!important;
+    padding-left: 10%!important;
+  }
+
+  .projects .image1 {
+    transform: translate(-10%, 10%);
+    width: 30%;
+  }
+
+  .projects .image2 {
+    width: 30%;
+    transform: translate(45%, 50%);
+  }
+
+
+  .projects .image3 {
+    transform: translate(-75%, 30%);
+    width: 30%;
+
+  }
+
+  .projects .image4 {
+    z-index: 1;
+    transform: translate(-10%, 10%);
+    width: 30%;
+  }
+
+  .projects .image5 {
+    width: 30%;
+    transform: translate(45%, 50%);
+  }
+
+
+  .projects .image6 {
+    transform: translate(-75%, 30%);
+    width: 30%;
+
+  }
+
+  .project-description h3{
+    font-size: 1.5rem;
+    display: flex;
+  }
+
+  .project-description .mt-5{
+    margin-top: 1%!important;
+  }
+
+  .project-description p{
+    font-size: 1rem;
+    font-weight: 300;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-description .toptext {
+    padding-left: 3%;
+    top: 10%;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+  }
+
+  .project-description .bottomtext {
+    padding-bottom: 2%;
+    vertical-align: bottom;
+ }
+
+  .border-right{
+    border-radius: 16px;
+  }
+
+}
