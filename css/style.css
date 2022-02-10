@@ -6,9 +6,10 @@
 
 }
 
-body{
+body, html{
   overflow-x: hidden;
 }
+
 
 h3,p,h1,h2 {
   font-family: 'ubuntu';
