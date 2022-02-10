@@ -7,10 +7,12 @@ tl.from('.image3',.1,{x:-10,opacity:0});
 
 const scene = new ScrollMagic.Scene({
   triggerElement:".project1",
-  triggerHook:'.3',
-  duration:"300vh"
+  triggerHook:'.5',
+  duration:"30%"
 })
 .setTween(tl)
+.addIndicators()
+.setClassToggle(".scrollicon",'fade-out')
 .addTo(controller);
 
 
@@ -18,7 +20,7 @@ const scene = new ScrollMagic.Scene({
 new ScrollMagic.Scene({
   triggerElement:'.project1',
   triggerHook:'onLeave',
-  duration:"50%",
+  duration:"300vh",
 })
 .setPin(".project1")
 .setClassToggle(".pone", 'fade-in')
@@ -45,10 +47,11 @@ tl2.from('.image6',.1,{x:-100,opacity:0});
 
 const scene2 = new ScrollMagic.Scene({
   triggerElement:".project2",
-  triggerHook:'0',
+  triggerHook:'.5',
   duration:"300vh"
 })
 .setTween(tl2)
+.setClassToggle(".scrollicon",'fade-out')
 .addTo(controller2);
 
 new ScrollMagic.Scene({
@@ -76,7 +79,7 @@ tl3.from('.image9',.1,{x:-100,opacity:0});
 
 const scene3 = new ScrollMagic.Scene({
   triggerElement:".project3",
-  triggerHook:'0',
+  triggerHook:'.5',
   duration:"300vh"
 })
 .setTween(tl3)
