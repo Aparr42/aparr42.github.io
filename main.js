@@ -1,100 +1,79 @@
-var tl = new TimelineMax({onUpdate:updatePercentage});
+var tl = new TimelineMax({onupDate:updatePercentage});
 const controller = new ScrollMagic.Controller();
 
-tl.from('.image1',.1,{y:20,opacity:0});
-tl.from('.image2',.1,{x:20,opacity:0});
-tl.from('.image3',.1,{x:-10,opacity:0});
+tl.to(".image1", 1,{y:-1100,opacity:1},'<');
+tl.to(".image2", 1,{y:-500,opacity:1},'<');
+tl.to(".image3", 1,{y:80,opacity:1},'<');
+tl.to(".image4", 1,{y:1400,opacity:1},'<');
+tl.to(".image5", 1,{y:1800,opacity:1},'<');
+tl.to(".image6", 1,{y:1700,opacity:1},'<');
+tl.to(".image7", 1,{y:2400,opacity:1},'<');
+tl.to(".image8", 1,{y:3500,opacity:1},'<');
+tl.to(".image9", 1,{y:2800,opacity:1},'<');
 
 const scene = new ScrollMagic.Scene({
-  triggerElement:".project1",
-  triggerHook:'.5',
-  duration:"30%"
+  triggerElement:".project",
+  triggerHook:".5",
+  duration: "300%"
 })
 .setTween(tl)
 .addIndicators()
-.setClassToggle(".scrollicon",'fade-out')
 .addTo(controller);
-
-
-
-new ScrollMagic.Scene({
-  triggerElement:'.project1',
-  triggerHook:'onLeave',
-  duration:"300vh",
-})
-.setPin(".project1")
-.setClassToggle(".pone", 'fade-in')
-.addTo(controller);
-
-
 
 function updatePercentage(){
   tl.progress();
-  console.log(tl.progress());
 }
 
+const aboutSection = document.querySelector(".project");
+const pone = document.querySelector("#des");
+
+document.addEventListener('scroll',function(){
+  const clientHeight = document.documentElement.clientHeight;
+  const aboutSectiony = aboutSection.getBoundingClientRect().y;
+
+  let neg = Math.abs(clientHeight) * -1;
+  let fadeneg = (neg+100);
+
+  if(aboutSectiony < 0){
+    pone.classList.add("fade-in");
+
+  }else if( aboutSectiony < ((aboutSectiony+clientHeight)) ){
+    pone.classList.remove("fade-in");
+    aboutSection.style.position = 'relative';
+  }
 
 
 
 
-var tl2 = new TimelineMax({onUpdate:updatePercentage2});
-const controller2 = new ScrollMagic.Controller();
 
 
-tl2.from('.image4',.1,{y:20,opacity:0});
-tl2.from('.image5',.1,{x:200,opacity:0});
-tl2.from('.image6',.1,{x:-100,opacity:0});
+  if(aboutSectiony < 0){
 
-const scene2 = new ScrollMagic.Scene({
-  triggerElement:".project2",
-  triggerHook:'.5',
-  duration:"300vh"
-})
-.setTween(tl2)
-.setClassToggle(".scrollicon",'fade-out')
-.addTo(controller2);
+    let topText = document.querySelector('.toptext').textContent = "01.";
 
-new ScrollMagic.Scene({
-  triggerElement:'.project2',
-  triggerHook:"0",
-  duration:"60%",
-})
-.setPin(".project2", {pushFollowers:false})
-.setClassToggle(".ptwo", 'fade-in')
-.addTo(controller);
+    let projectName = document.querySelector('.projectname').textContent = "Mast Service Staion";
+    let role = document.querySelector('.role').textContent = "UI-UX Designer | Full Stack Developer | Social Media Manager"
+    let projectDetail = document.querySelector('.projectdetail').textContent = "A digital transformation project for a local retail business in Punjab(India),that deals with the global leading brands in the industry."
+    let bottomText = document.querySelector('.bottomtext').textContent =" Bootstrap - Wordpress - JavaScript "
+  }
 
-function updatePercentage2(){
-  tl2.progress();
-  console.log(tl2.progress());
-}
+  if(aboutSectiony < neg){
 
+    let topText = document.querySelector('.toptext').textContent = "02.";
+    let projectName = document.querySelector('.projectname').textContent = "Renumerology";
+    let role = document.querySelector('.role').textContent = "UI/UX Designer | Digital marketing expert"
+    let projectDetail = document.querySelector('.projectdetail').textContent = "This is a professional services landing page website which is built to take bookings and appointments."
+    let bottomText = document.querySelector('.bottomtext').textContent ="Webflow Website"
+  }
 
-var tl3 = new TimelineMax({onUpdate:updatePercentage2});
-const controller3 = new ScrollMagic.Controller();
+  if(aboutSectiony < (2*neg)){
+
+    let topText = document.querySelector('.toptext').textContent = "03.";
+    let projectName = document.querySelector('.projectname').textContent = "Seva Patiala";
+    let role = document.querySelector('.role').textContent = "UI-UX Designer | Full Stack Developer | Social Media Manager"
+    let projectDetail = document.querySelector('.projectdetail').textContent = "A fundraising platform for under-priveleged kids. This project aims to educate children and help to support the marriages of the ones in need."
+    let bottomText = document.querySelector('.bottomtext').textContent ="Figma Project"
+  }
 
 
-tl3.from('.image7',.1,{y:20,opacity:0});
-tl3.from('.image8',.1,{x:200,opacity:0});
-tl3.from('.image9',.1,{x:-100,opacity:0});
-
-const scene3 = new ScrollMagic.Scene({
-  triggerElement:".project3",
-  triggerHook:'.5',
-  duration:"300vh"
-})
-.setTween(tl3)
-.addTo(controller2);
-
-new ScrollMagic.Scene({
-  triggerElement:'.project3',
-  triggerHook:"0",
-  duration:"60%",
-})
-.setPin(".project3", {pushFollowers:false})
-.setClassToggle(".pthree", 'fade-in')
-.addTo(controller3);
-
-function updatePercentage3(){
-  tl3.progress();
-  console.log(tl3.progress());
-}
+});
