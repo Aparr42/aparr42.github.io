@@ -17,7 +17,6 @@ const scene = new ScrollMagic.Scene({
   duration: "300%"
 })
 .setTween(tl)
-.addIndicators()
 .addTo(controller);
 
 function updatePercentage(){
