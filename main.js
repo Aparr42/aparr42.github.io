@@ -1,3 +1,4 @@
+alert("working");
 var tl = new TimelineMax({onupDate:updatePercentage});
 const controller = new ScrollMagic.Controller();
 
