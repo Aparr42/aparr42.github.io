@@ -136,17 +136,21 @@ i{
 
 /* Projects */
 
-.projects{
-height: 150vh;
-width: 100vw;
-position: relative;
+.work{
+height: 400vh;
 }
 
- .project1 .project2 .project3{
-  width:100%;
+.project{
+height: 100vh;
+width: 100vw;
+display: flex;
+position: fixed;
+}
+
+
+.project2, .project3{
+  background-color: #444;
   height: 100vh;
-  position: fixed;
-  overflow: hidden;
 }
 
 .project-description{
@@ -154,33 +158,30 @@ position: relative;
   padding-top: 2%;
   padding-left: 1%;
   height: 100vh;
-  float: left;
   transition: all .5s ease-in-out;
 }
 
 
-
-.project-description h3{
-  font-size: 4.5rem;
-  display: flex;
-}
-
 .project-description p{
-  font-size: 1.5rem;
-  font-weight: 400;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  opacity: 90%;
+  position: fixed!important;
+  top:30vh;
 }
+
+.project-description .projectname{
+  font-size: 4.5rem;
+  position: fixed!important;
+  top:20vh;
+}
+
+
 
 .project-description .toptext {
   padding-left: 1%;
   top: 5%;
   justify-content: center;
   align-items: center;
-  height: 15vh;
   font-weight: 500;
+  position: fixed!important;
 }
 
 .fade-in{
@@ -197,11 +198,11 @@ position: relative;
 .project-description .bottomtext {
   padding-bottom: 2%;
   padding-left: 1%;
-  position: absolute;
   bottom: 3%;
   left: 0;
   font-weight: 400;
   opacity: 60%;
+  position: fixed!important;
 }
 
  .ptwo {
@@ -218,8 +219,6 @@ position: relative;
  opacity: 0;
  transition: all .5s ease-in-out;
 }
-
-
 
 .project-images img{
 
@@ -239,65 +238,65 @@ position: relative;
   align-items: center;
 }
 
-.projects .image2 {
+.project .image2 {
   position: absolute;
   width: 20%;
-  transform: translate(-55%, 10%);
+  transform: translate(-65%, 90vh);
 }
 
-.projects .image1 {
+.project .image1 {
   position: absolute;
   z-index: 1;
-  transform: translate(0%, -20%);
+  transform: translate(0%, 45vh);
   width: 20%;
 }
 
-.projects .image3 {
+.project .image3 {
   position: absolute;
-  transform: translate(55%, 10%);
+  transform: translate(65%, 100vh);
   width: 20%;
 
 }
 
-.projects .image4 {
-  position: absolute;
-  width: 20%;
-  transform: translate(-55%, 10%);
-}
-
-.projects .image5 {
-  position: absolute;
-  z-index: 1;
-  transform: translate(55%, 10%);
-
-  width: 20%;
-}
-
-.projects .image6 {
+.project .image4 {
   position: absolute;
   width: 20%;
-  transform: translate(0%, -20%);
+  transform: translate(-65%, 350vh);
 }
 
-
-.projects .image7 {
-  position: absolute;
-  width: 20%;
-  transform: translate(-55%, 10%);
-}
-
-.projects .image8 {
+.project .image5 {
   position: absolute;
   z-index: 1;
-  transform: translate(55%, 10%);
+  transform: translate(0%, 580vh);
 
   width: 20%;
 }
 
-.projects .image9 {
+.project .image6 {
   position: absolute;
   width: 20%;
-  transform: translate(0%, -20%);
+  transform: translate(65%, 480vh);
+}
+
+
+.project .image7 {
+  position: absolute;
+  width: 20%;
+  transform: translate(-55%, 1850vh);
+}
+
+.project .image8 {
+  position: absolute;
+  z-index: 1;
+  transform: translate(55%, 1780vh);
+
+  width: 20%;
+}
+
+.project .image9 {
+  position: absolute;
+  width: 20%;
+  transform: translate(0%, 1500vh);
 }
 
 .projects .scrollicon{
