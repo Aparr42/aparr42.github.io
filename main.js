@@ -1,4 +1,31 @@
-TweenLite.defaultOverwrite = false;
+
+var tl = new TimelineMax({onupDate:updatePercentage});
+const controller = new ScrollMagic.Controller();
+
+
+tl.to(".image1", 1,{y:-1100,opacity:1},'<');
+tl.to(".image2", 1,{y:-500,opacity:1},'<');
+tl.to(".image3", 1,{y:80,opacity:1},'<');
+tl.to(".image4", 1,{y:1400,opacity:1},'<');
+tl.to(".image5", 1,{y:1800,opacity:1},'<');
+tl.to(".image6", 1,{y:1700,opacity:1},'<');
+tl.to(".image7", 1,{y:2400,opacity:1},'<');
+tl.to(".image8", 1,{y:3500,opacity:1},'<');
+tl.to(".image9", 1,{y:2800,opacity:1},'<');
+
+const scene = new ScrollMagic.Scene({
+  triggerElement:".project",
+  triggerHook:".5",
+  duration: "300%"
+})
+.setTween(tl)
+.addIndicators()
+.addTo(controller);
+
+function updatePercentage(){
+  tl.progress();
+}
+
 const aboutSection = document.querySelector(".project");
 const pone = document.querySelector("#des");
 
@@ -9,12 +36,6 @@ document.addEventListener('scroll',function(){
   let neg = Math.abs(clientHeight) * -1;
   let fadeneg = (neg+100);
 
-  if(aboutSectiony < 0){
-    pone.classList.add("fade-in");
-
-  }else {
-    pone.classList.remove("fade-in");
-  }
 
   if(aboutSectiony < 0){
 
@@ -46,29 +67,3 @@ document.addEventListener('scroll',function(){
 
 
 });
-
-var tl = new TimelineMax({onupDate:updatePercentage});
-const controller = new ScrollMagic.Controller();
-
-tl.to(".image1", 1,{y:-1100,opacity:1},'<');
-tl.to(".image2", 1,{y:-500,opacity:1},'<');
-tl.to(".image3", 1,{y:80,opacity:1},'<');
-tl.to(".image4", 1,{y:1400,opacity:1},'<');
-tl.to(".image5", 1,{y:1800,opacity:1},'<');
-tl.to(".image6", 1,{y:1700,opacity:1},'<');
-tl.to(".image7", 1,{y:2400,opacity:1},'<');
-tl.to(".image8", 1,{y:3500,opacity:1},'<');
-tl.to(".image9", 1,{y:2800,opacity:1},'<');
-
-const scene = new ScrollMagic.Scene({
-  triggerElement:".project",
-  triggerHook:".5",
-  duration: "300%"
-})
-.setTween(tl)
-.addTo(controller);
-
-function updatePercentage(){
-  tl.progress();
-}
-
