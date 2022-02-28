@@ -11,9 +11,8 @@ document.addEventListener('scroll',function(){
   if(aboutSectiony < 0){
     pone.classList.add("fade-in");
 
-  }else if( aboutSectiony < ((aboutSectiony+clientHeight)) ){
+  }else if( aboutSectiony > 0 ){
     pone.classList.remove("fade-in");
-    aboutSection.style.position = 'relative';
   }
 
   if(aboutSectiony < 0){
