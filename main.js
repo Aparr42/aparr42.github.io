@@ -1,22 +1,27 @@
-var tl = new TimelineMax({onupDate:updatePercentage});
+
+
 const controller = new ScrollMagic.Controller();
 
-tl.to(".image1", 1,{y:-1100,opacity:1},'<');
-tl.to(".image2", 1,{y:-500,opacity:1},'<');
-tl.to(".image3", 1,{y:80,opacity:1},'<');
-tl.to(".image4", 1,{y:1400,opacity:1},'<');
-tl.to(".image5", 1,{y:1800,opacity:1},'<');
-tl.to(".image6", 1,{y:1700,opacity:1},'<');
-tl.to(".image7", 1,{y:2400,opacity:1},'<');
-tl.to(".image8", 1,{y:3500,opacity:1},'<');
-tl.to(".image9", 1,{y:2800,opacity:1},'<');
+var tl = new TimelineMax({onupDate:updatePercentage});
+
+
+tl.to(".image1", 1,{y:'-30vh',opacity:1},'<');
+tl.to(".image2", 1,{y:'-10vh',opacity:1},'<');
+tl.to(".image3", 1,{y:'-50vh',opacity:1},'<');
+tl.to(".image4", 1,{y:'70vh',opacity:1},'<');
+tl.to(".image5", 1,{y:'90vh',opacity:1},'<');
+tl.to(".image6", 1,{y:'90vh',opacity:1},'<');
+tl.to(".image7", 1,{y:'170vh',opacity:1},'<');
+tl.to(".image8", 1,{y:'180vh',opacity:1},'<');
+tl.to(".image9", 1,{y:'245vh',opacity:1},'<');
 
 const scene = new ScrollMagic.Scene({
   triggerElement:".project",
   triggerHook:".5",
-  duration: "300%"
+  duration: "320%"
 })
 .setTween(tl)
+.addIndicators()
 .addTo(controller);
 
 function updatePercentage(){
