@@ -1,3 +1,4 @@
+TweenLite.defaultOverwrite = false;
 const aboutSection = document.querySelector(".project");
 const pone = document.querySelector("#des");
 
