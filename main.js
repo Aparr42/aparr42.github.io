@@ -1,7 +1,5 @@
-
 var tl = new TimelineMax({onupDate:updatePercentage});
 const controller = new ScrollMagic.Controller();
-
 
 tl.to(".image1", 1,{y:-1100,opacity:1},'<');
 tl.to(".image2", 1,{y:-500,opacity:1},'<');
@@ -26,18 +24,31 @@ function updatePercentage(){
   tl.progress();
 }
 
-const aboutSection = document.querySelector(".project");
+const projectSection = document.querySelector(".project");
 const pone = document.querySelector("#des");
 
 document.addEventListener('scroll',function(){
   const clientHeight = document.documentElement.clientHeight;
-  const aboutSectiony = aboutSection.getBoundingClientRect().y;
+  const projectSectiony = projectSection.getBoundingClientRect().y;
 
   let neg = Math.abs(clientHeight) * -1;
-  let fadeneg = (neg+100);
+  let fadeOut= Math.abs(clientHeight)*-2.5 - 100;
 
 
-  if(aboutSectiony < 0){
+  console.log(projectSectiony);
+  console.log(clientHeight);
+  console.log(fadeOut);
+
+  if(projectSectiony<fadeOut){
+    pone.classList.remove("fade-in")
+  }else if(projectSectiony < 0){
+    pone.classList.add("fade-in");
+
+  }else if( projectSectiony >0 ){
+    pone.classList.remove("fade-in");
+  }
+
+  if(projectSectiony < 0){
 
     let topText = document.querySelector('.toptext').textContent = "01.";
 
@@ -47,7 +58,7 @@ document.addEventListener('scroll',function(){
     let bottomText = document.querySelector('.bottomtext').textContent =" Bootstrap - Wordpress - JavaScript "
   }
 
-  if(aboutSectiony < neg){
+  if(projectSectiony < neg){
 
     let topText = document.querySelector('.toptext').textContent = "02.";
     let projectName = document.querySelector('.projectname').textContent = "Renumerology";
@@ -56,7 +67,7 @@ document.addEventListener('scroll',function(){
     let bottomText = document.querySelector('.bottomtext').textContent ="Webflow Website"
   }
 
-  if(aboutSectiony < (2*neg)){
+  if(projectSectiony < (2*neg)){
 
     let topText = document.querySelector('.toptext').textContent = "03.";
     let projectName = document.querySelector('.projectname').textContent = "Seva Patiala";
