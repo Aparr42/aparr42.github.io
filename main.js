@@ -12,7 +12,7 @@ document.addEventListener('scroll',function(){
   if(aboutSectiony < 0){
     pone.classList.add("fade-in");
 
-  }else if( aboutSectiony > 0 ){
+  }else {
     pone.classList.remove("fade-in");
   }
 
