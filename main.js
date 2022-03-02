@@ -4,16 +4,15 @@ const controller = new ScrollMagic.Controller();
 
 var tl = new TimelineMax({onupDate:updatePercentage});
 
-
 tl.to(".image1", 1,{y:'-30vh',opacity:1},'<');
-tl.to(".image2", 1,{y:'-10vh',opacity:1},'<');
+tl.to(".image2", 1,{y:'-150vh',opacity:1},'<');
 tl.to(".image3", 1,{y:'-50vh',opacity:1},'<');
-tl.to(".image4", 1,{y:'70vh',opacity:1},'<');
-tl.to(".image5", 1,{y:'90vh',opacity:1},'<');
-tl.to(".image6", 1,{y:'90vh',opacity:1},'<');
-tl.to(".image7", 1,{y:'170vh',opacity:1},'<');
-tl.to(".image8", 1,{y:'180vh',opacity:1},'<');
-tl.to(".image9", 1,{y:'245vh',opacity:1},'<');
+tl.to(".image4", 1,{y:'-30vh',opacity:1},'<');
+tl.to(".image5", 1,{y:'-40vh',opacity:1},'<');
+tl.to(".image6", 1,{y:'-80vh',opacity:1},'<');
+tl.to(".image7", 1,{y:'-50vh',opacity:1},'<');
+tl.to(".image8", 1,{y:'-80vh',opacity:1},'<');
+tl.to(".image9", 1,{y:'-100vh',opacity:1},'<');
 
 const scene = new ScrollMagic.Scene({
   triggerElement:".project",
