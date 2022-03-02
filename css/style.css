@@ -7,17 +7,7 @@
 }
 
 body, html{
-  overflow-x: hidden!important;
-}
 
-.scroll-container {
-  position: absolute;
-  overflow: hidden;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
 }
 
 
@@ -143,34 +133,25 @@ i{
 .about .column{
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 20%;
-  padding-bottom: 10%;
+  padding-top: 10%;
+  padding-bottom: 5%;
 }
 
 /* Projects */
 
 .work{
-height: 350vh;
-overflow-y: hidden;
 position: relative;
 }
 
-.project{
-height: 350vh;
+.project, .project2, .project3{
+height: 100vh;
 width: 100vw;
 display: flex;
-z-index: 0;
-position: absolute;
 overflow: hidden!important;
 }
 
-.Section2{
-  z-index: 1;
-}
-
-.project2, .project3{
-  background-color: #f4f5ff!important;
-  height: 100vh;
+.project2{
+  background-color: yellow;
 }
 
 .project-description{
@@ -183,7 +164,6 @@ overflow: hidden!important;
 
 }
 
-
 .project-description p{
   position: fixed!important;
   top:30vh;
@@ -195,15 +175,12 @@ overflow: hidden!important;
   top:25vh;
 }
 
-
 .project-description .projectname{
   font-size: 4.5rem;
   position: fixed!important;
   top:20vh;
   color: #444;
 }
-
-
 
 .project-description .toptext {
   padding-left: 1%;
@@ -243,7 +220,7 @@ overflow: hidden!important;
 .pone {
  opacity: 0;
  transition: all .5s ease-in-out;
- 
+
 }
 
 .pthree {
@@ -256,14 +233,13 @@ overflow: hidden!important;
   filter: drop-shadow(10px 10px 10px #444);
   border-radius: 16px;
   opacity: 95%;
-
 }
 
 .project-images {
   width: 50%;
   float: right;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   align-items: center;
   overflow-x: hidden!important;
 }
@@ -288,77 +264,103 @@ overflow: hidden!important;
 
 }
 
-.project .image4 {
+.project2 .image4 {
   position: absolute;
   width: 20%;
-  transform: translate(-15%, 350vh);
+  transform: translate(-15%, 190vh);
 }
 
-.project .image5 {
+.project2 .image5 {
   position: absolute;
   z-index: 1;
-  transform: translate(40%, 580vh);
+  transform: translate(36%, 180vh);
   width: 25%;
 }
 
-.project .image6 {
+.project2 .image6 {
   position: absolute;
   width: 20%;
-  transform: translate(40%, 480vh);
+  transform: translate(2%, 220vh);
   right:5%;
 }
 
 
-.project .image7 {
+.project3 .image7 {
   position: absolute;
   width: 20%;
-  transform: translate(-15%, 1850vh);
+  transform: translate(-15%, 130vh);
 }
 
-.project .image8 {
+.project3 .image8 {
   position: absolute;
   z-index: 1;
-  transform: translate(60%, 1780vh);
+  transform: translate(36%, 150vh);
   width: 25%;
 }
 
-.project .image9 {
+.project3 .image9 {
   position: absolute;
   width: 20%;
-  transform: translate(40%, 1500vh);
+  transform: translate(2%, 220vh);
   right:5%;
 }
 
-.projects .scrollicon{
-  height: 50px;
-  width: 30px;
-  border: 2px solid black;
-  position: fixed;
-  left: 50%;
-  bottom: 20px;
-  border-radius: 50px;
-  cursor: pointer;
+.frameworks{
+  height: 100vh;
+  padding-top: 40vh;
+  padding-left: 10vh;
+  padding-right: 10vh;
+}
+
+.grid-container {
+  margin-top: 10vh;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  align-items: center;
+}
+
+.grid-item {
+  border: 0px solid #444;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
   opacity: 50%;
-  animation: blinker 5s linear infinite;
-  animation-delay: 3s;
-  opacity: .1;
+  transition: .4s ease-in-out;
+  height: 15rem;
 }
 
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
+
+.grid-item:hover{
+  opacity: 100%;
 }
 
+.frameworks img{
+  width: 6rem;
+  filter: grayscale(60%);
+}
+
+.frameworks img:hover{
+  width: 6rem;
+  filter: grayscale(0%);
+  transition: .2s ease-in-out;
+    filter: drop-shadow(.5px .5px .5px #444);
+
+}
+
+.frameworks h2{
+  width:60%;
+  text-align: center;
+  margin: auto;
+  opacity: 90%;
+}
 
 @media only screen and (min-width: 1024px){
   .container{
     padding-left:0!important;
     padding-right:0!important;
   }
-
-
-
 }
 
 
